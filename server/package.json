@@ -21,7 +21,8 @@
     "prestart": "npm run build",
     "start": "node ."
   },
-  "author": "",
+  "author": "Tom Heaton",
   "license": "MIT",
-  "description": ""
+  "description": "Dice Game Server",
+  "private": true
 }
