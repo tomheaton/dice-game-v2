@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './images/logo.svg';
-import './App.css';
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
+import JoinPage from "./pages/JoinPage";
+import HomePage from "./pages/HomePage";
+import CreatePage from "./pages/CreatePage";
 
 const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <BrowserRouter>
+            <div className={"app"}>
+                <h1>App</h1>
+
+                <nav className={"navbar"}>
+                    <ul>
+                        <li><Link to={"/"}>Home</Link></li>
+                        <li><Link to={"/create"}>Create</Link></li>
+                        <li><Link to={"/join"}>Join</Link></li>
+                    </ul>
+                </nav>
+
+                <Switch>
+                    <Route exact path={"/"} component={HomePage}/>
+                    <Route exact path={"/create"} component={CreatePage}/>
+                    <Route exact path={"/join"} component={JoinPage}/>
+                </Switch>
+            </div>
+        </BrowserRouter>
     );
 }
 
