@@ -1,7 +1,11 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "repository": "github.com/tomheaton/dice-game-v2",
+  "version": "1.0.0",
   "private": true,
+  "author": "Tom Heaton",
+  "license": "MIT",
+  "description": "Dice Game Client",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

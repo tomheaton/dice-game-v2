@@ -1,4 +1,12 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "author": "Tom Heaton",
+  "license": "MIT",
+  "description": "Dice Game Server",
+  "repository": "github.com/tomheaton/dice-game-v2",
+  "private": true,
+  "main": "dist/index.js",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -12,17 +20,10 @@
     "tslint": "^6.1.3",
     "typescript": "^4.4.3"
   },
-  "name": "server",
-  "version": "1.0.0",
-  "main": "dist/index.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node ."
-  },
-  "author": "Tom Heaton",
-  "license": "MIT",
-  "description": "Dice Game Server",
-  "private": true
+  }
 }
